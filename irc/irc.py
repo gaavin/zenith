@@ -99,7 +99,7 @@ class Client:
         if isinstance(command, Ping):
             self._raise_event("PING", [command])
 
-    def handle_connection_lost(self, exc: Exception) -> None:
+    def handle_connection_lost(self) -> None:
         self.close()
 
     def close(self) -> None:
